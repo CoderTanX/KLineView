@@ -8,6 +8,7 @@
 
 #import "KLineView.h"
 #define offsetLeftX  50
+#define labelMargin 2
 @interface KLineView ()
 @property (nonatomic, assign) CGFloat contentLeft;
 @property (nonatomic, assign) CGFloat contentWidth;
@@ -79,8 +80,19 @@
     NSString *endTime = @"15:00";
     CGSize endLabelSize = [endTime sizeWithAttributes:attrs];
     [endTime drawAtPoint:CGPointMake(self.contentLeft + self.contentWidth - endLabelSize.width, rect.size.height * self.kLineViewHRatio) withAttributes:attrs];
-    
+    //画价格
+    NSString *maxPrice = @"6.54";
+    CGSize maxPriceLabelSize = [maxPrice sizeWithAttributes:attrs];
+    [maxPrice drawAtPoint:CGPointMake(self.contentLeft - maxPriceLabelSize.width - labelMargin, rect.origin.x) withAttributes:attrs];
+    NSString *midPrice = @"6.32";
+    CGSize midPriceLabelSize = [midPrice sizeWithAttributes:attrs];
+    [midPrice drawAtPoint:CGPointMake(self.contentLeft - midPriceLabelSize.width - labelMargin, rect.size.height * self.kLineViewHRatio * 0.5 - midPriceLabelSize.height * 0.5) withAttributes:attrs];
+    NSString *minPrice = @"6.23";
+    CGSize minPriceLabelSize = [minPrice sizeWithAttributes:attrs];
+    [minPrice drawAtPoint:CGPointMake(self.contentLeft - midPriceLabelSize.width - labelMargin, rect.size.height * self.kLineViewHRatio - minPriceLabelSize.height) withAttributes:attrs];
 }
+
+
 /**
  *  根据两个点画一条细线
  *
@@ -100,7 +112,7 @@
         CGFloat lengths[] = {1,1};
         CGContextSetLineDash(context, 0, lengths, 1);
     }else{
-        CGFloat lengths[] = {1,1};
+        CGFloat lengths[] = {1,0};
         CGContextSetLineDash(context, 0, lengths, 0);
     }
     //设置细线颜色
