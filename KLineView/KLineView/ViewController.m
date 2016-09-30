@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "KLineView.h"
+#import "KLineManager.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet KLineView *klineView;
 
@@ -17,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.klineView.borderWidth = 4.0;
+    KLineManager *manager = [[KLineManager alloc] init];
+    self.klineView.manager = manager;
 }
 
 

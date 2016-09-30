@@ -17,6 +17,9 @@
 		DB15655F1D9A58E100E3C4E2 /* KLineViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB15655E1D9A58E100E3C4E2 /* KLineViewUITests.m */; };
 		DB15656E1D9A590E00E3C4E2 /* KLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB15656D1D9A590E00E3C4E2 /* KLineView.m */; };
 		DB1565711D9A631C00E3C4E2 /* UIView+TAXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1565701D9A631C00E3C4E2 /* UIView+TAXAdditions.m */; };
+		DB57EA0A1D9CBF020066E40C /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB57EA091D9CBF020066E40C /* data.plist */; };
+		DB57EA0D1D9CBFD20066E40C /* KLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57EA0C1D9CBFD20066E40C /* KLineModel.m */; };
+		DB57EA101D9CC2820066E40C /* KLineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57EA0F1D9CC2820066E40C /* KLineManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,11 @@
 		DB15656D1D9A590E00E3C4E2 /* KLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineView.m; sourceTree = "<group>"; };
 		DB15656F1D9A631C00E3C4E2 /* UIView+TAXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TAXAdditions.h"; sourceTree = "<group>"; };
 		DB1565701D9A631C00E3C4E2 /* UIView+TAXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TAXAdditions.m"; sourceTree = "<group>"; };
+		DB57EA091D9CBF020066E40C /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		DB57EA0B1D9CBFD20066E40C /* KLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineModel.h; sourceTree = "<group>"; };
+		DB57EA0C1D9CBFD20066E40C /* KLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineModel.m; sourceTree = "<group>"; };
+		DB57EA0E1D9CC2820066E40C /* KLineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineManager.h; sourceTree = "<group>"; };
+		DB57EA0F1D9CC2820066E40C /* KLineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +115,15 @@
 		DB1565381D9A58E100E3C4E2 /* KLineView */ = {
 			isa = PBXGroup;
 			children = (
+				DB57EA091D9CBF020066E40C /* data.plist */,
 				DB15656F1D9A631C00E3C4E2 /* UIView+TAXAdditions.h */,
 				DB1565701D9A631C00E3C4E2 /* UIView+TAXAdditions.m */,
 				DB15656C1D9A590E00E3C4E2 /* KLineView.h */,
 				DB15656D1D9A590E00E3C4E2 /* KLineView.m */,
+				DB57EA0B1D9CBFD20066E40C /* KLineModel.h */,
+				DB57EA0C1D9CBFD20066E40C /* KLineModel.m */,
+				DB57EA0E1D9CC2820066E40C /* KLineManager.h */,
+				DB57EA0F1D9CC2820066E40C /* KLineManager.m */,
 				DB15653C1D9A58E100E3C4E2 /* AppDelegate.h */,
 				DB15653D1D9A58E100E3C4E2 /* AppDelegate.m */,
 				DB15653F1D9A58E100E3C4E2 /* ViewController.h */,
@@ -255,6 +268,7 @@
 			files = (
 				DB1565491D9A58E100E3C4E2 /* LaunchScreen.storyboard in Resources */,
 				DB1565461D9A58E100E3C4E2 /* Assets.xcassets in Resources */,
+				DB57EA0A1D9CBF020066E40C /* data.plist in Resources */,
 				DB1565441D9A58E100E3C4E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +297,8 @@
 				DB15656E1D9A590E00E3C4E2 /* KLineView.m in Sources */,
 				DB1565411D9A58E100E3C4E2 /* ViewController.m in Sources */,
 				DB1565711D9A631C00E3C4E2 /* UIView+TAXAdditions.m in Sources */,
+				DB57EA101D9CC2820066E40C /* KLineManager.m in Sources */,
+				DB57EA0D1D9CBFD20066E40C /* KLineModel.m in Sources */,
 				DB15653E1D9A58E100E3C4E2 /* AppDelegate.m in Sources */,
 				DB15653B1D9A58E100E3C4E2 /* main.m in Sources */,
 			);
@@ -508,6 +524,7 @@
 				DB1565651D9A58E100E3C4E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB1565661D9A58E100E3C4E2 /* Build configuration list for PBXNativeTarget "KLineViewTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +533,7 @@
 				DB1565681D9A58E100E3C4E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB1565691D9A58E100E3C4E2 /* Build configuration list for PBXNativeTarget "KLineViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +542,7 @@
 				DB15656B1D9A58E100E3C4E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
